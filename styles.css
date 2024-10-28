@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1d1b27;
+  color: white;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0px 15px;
+}
+.anasayfa-body {
+  height: 100vh;
+}
+
+.blur body > *:not(#messageBox) {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+}
+
+.universe {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-top: 30px;
+}
+
+.planet {
+  font-size: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.planet:hover {
+  transform: scale(1.3);
+}
+
+#messageBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4b0082;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  opacity: 0.95;
+  width: 300px;
+  text-align: center;
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  background-color: #8a2be2;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #9932cc;
+}
+
+.yazi {
+  margin: 0px 0; /* Üst ve alt boşluk ayarı */
+  line-height: 1.5; /* Satır aralığı ayarı */
+  margin-bottom: 10px; /* Boşluk ayarı */
+  line-height: 1.5; /* Satır aralığı ayarı */
+  text-align: justify; /* Metni sola yasla */
+}
+/* Açılış Animasyonu */
+#intro {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #6a0dad;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  animation: slideDown 2s forwards;
+  z-index: 10; /* En üst katmanda */
+}
+
+@keyframes slideDown {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+/* Konfeti */
+.confetti {
+  position: fixed;
+  top: 0vh; /* Ekranın yukarısından başlayacak */
+  width: 8px;
+  height: 15px;
+  opacity: 0.8;
+  animation: fall linear infinite;
+  z-index: 11;
+  visibility: hidden; /* Başlangıçta görünmez */
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    visibility: visible; /* Animasyon başladığında görünür */
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+/* Ana içerik */
+.hidden {
+  display: none;
+}
