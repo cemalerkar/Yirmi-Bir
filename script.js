@@ -92,7 +92,7 @@ function createConfetti() {
     document
       .querySelectorAll(".confetti")
       .forEach((confetti) => confetti.remove());
-  }, 6000); // 5 saniye + 2 saniye ekstra
+  }, 5000); // 5 saniye + 2 saniye ekstra
 }
 
 // Rastgele renk seçimi
